@@ -34,7 +34,7 @@ default-agent \
 agent NoInputNoOutput \
 EOF \
 sudo hciconfig hci0 sspmode 0 \
-bash /home/{username, ex:pi}/RPi-WiFiProvisioning/remove_all_paired_devices.sh \
+bash /home/{username, ex:pi}/RPi-WiFiProvisioning/remove_all_paired_devices.sh
 
 - Set bluetooth discoverable permanently
 
