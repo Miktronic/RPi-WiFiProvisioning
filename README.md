@@ -17,7 +17,7 @@ sudo nano /etc/systemd/system/dbus-org.bluez.service
 
 ...
 
-ExecStart=/usr/lib/bluetooth/bluetoothd -C
+ExecStart=/usr/lib/bluetooth/bluetoothd -C \
 ExecStartPost=/usr/bin/sdptool add SP
 
 ...
@@ -26,15 +26,15 @@ sudo reboot
 
 - Add the followings in /etc/rc.local before "exit 0"
 
-sudo bluetoothctl <<EOF
-power on
-discoverable on
-pairable on
-default-agent
-agent NoInputNoOutput
-EOF
-sudo hciconfig hci0 sspmode 0
-bash /home/{username, ex:pi}/RPi-WiFiProvisioning/remove_all_paired_devices.sh
+sudo bluetoothctl <<EOF \
+power on \
+discoverable on \
+pairable on \
+default-agent \
+agent NoInputNoOutput \
+EOF \
+sudo hciconfig hci0 sspmode 0 \
+bash /home/{username, ex:pi}/RPi-WiFiProvisioning/remove_all_paired_devices.sh \
 
 - Set bluetooth discoverable permanently
 
@@ -48,7 +48,7 @@ DiscoverableTimeout = 0
 
 - Copy/Paste Service files to /etc/systemd/system/
 
-sudo cp ./RPi-WiFiProvisioning/simple_agent.service /etc/systemd/system  
+sudo cp ./RPi-WiFiProvisioning/simple_agent.service /etc/systemd/system  \
 
 this is a bluetooth agent service with PIN Code Authentication
 
@@ -56,9 +56,9 @@ sudo cp ./RPi-WiFiProvisioning/rfcomm_server.service /etc/systemd/system
 
 this is a bluetooth terminal server
 
-sudo systemctl daemon-reload
-sudo systemctl enable simple_agent.service
-sudo systemctl enalbe rfcommn_server.service
+sudo systemctl daemon-reload \
+sudo systemctl enable simple_agent.service \
+sudo systemctl enalbe rfcommn_server.service \
 
 sudo reboot
 
