@@ -1,5 +1,7 @@
 # RPi-WiFiProvisioning by Bluetooth Serial terminal
 
+This application is tested in Raspberry Pi 4B using raspbian buster
+
 # Step1 : Install bluetooth packages for python application and download github app
 
 sudo apt-get install bluetooth bluez python-bluez
