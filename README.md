@@ -48,7 +48,7 @@ DiscoverableTimeout = 0
 
 - Copy/Paste Service files to /etc/systemd/system/
 
-sudo cp ./RPi-WiFiProvisioning/simple_agent.service /etc/systemd/system  \
+sudo cp ./RPi-WiFiProvisioning/simple_agent.service /etc/systemd/system
 
 this is a bluetooth agent service with PIN Code Authentication
 
