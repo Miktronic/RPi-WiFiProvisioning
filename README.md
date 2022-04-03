@@ -72,7 +72,7 @@ https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_ter
 
 Goto bluetooth setting on the phone \
 Scan the devices. You can see "raspberrypi" device. Click the "raspberrypi" \
-Input PIN Code: 1234 \
+Input PIN Code: 1234
 
 - Open the Serial Bluetooth Terminal app
 
