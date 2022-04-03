@@ -62,4 +62,25 @@ sudo systemctl enalbe rfcommn_server.service \
 
 sudo reboot
 
+# Mobile App
+
+- Install the serial bluetooth terminal app on the phone
+
+https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=en_US&gl=US
+
+- Connect to Raspberry pi
+
+Goto bluetooth setting on the phone \
+Scan the devices. You can see "raspberrypi" device. Click the "raspberrypi" \
+Input PIN Code: 1234 \
+
+- Open the Serial Bluetooth Terminal app
+
+Open menu. \
+Click Devices. \
+Click Bluetooth Classic tag. You can see the "raspberrypi" device connected to phone \
+Connect to "raspberrypi device" \
+You can send wifi info to raspberrypi. {"ssid":"...","pw":"..."} \
+If wifi is configured successfully, the Pi return "OK"
+You can send other terminal commands to Raspberry Pi.
 
