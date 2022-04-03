@@ -11,7 +11,13 @@ git clone ....
 chmod 755 -R ./RPi-WiFiProvisioning
 
 # Step2 Raspberry pi Bluetooth configuration
+- Setup the SPP(Serial port profile)
 
+sudo nano /etc/systemd/system/dbus-org.bluez.service
+...
+ExecStart=/usr/lib/bluetooth/bluetoothd -C
+ExecStartPost=/usr/bin/sdptool add SP
+...
 - Add the followings in /etc/rc.local before "exit 0"
 
 sudo bluetoothctl <<EOF
